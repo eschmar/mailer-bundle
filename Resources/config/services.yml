@@ -1,0 +1,5 @@
+services:
+    # Mailer Service
+    emailer:
+        class: Eschmar\MailerBundle\Service\Mailer
+        arguments: [@mailer, @twig]

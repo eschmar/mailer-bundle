@@ -1,0 +1,25 @@
+{
+    "name": "eschmar/mailer-bundle",
+    "license": "MIT",
+    "type": "symfony-bundle",
+    "keywords": ["mail", "mailer", "symfony"],
+    "description": "Conveniently send html/plaintext emails in Symfony2.",
+    "homepage": "https://github.com/eschmar/mailer-bundle",
+    "authors": [
+        {
+            "name": "Marcel Eschmann",
+            "homepage": "https://github.com/eschmar",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-0": { "Eschmar\\MailerBundle": "" }
+    },
+    "target-dir": "Eschmar/MailerBundle",
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/symfony": "~2.4",
+        "symfony/swiftmailer-bundle": "~2.3",
+        "eschmar/css-inliner-bundle": "dev-master"
+    }
+}

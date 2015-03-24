@@ -1,0 +1,26 @@
+{% extends 'EschmarMailerBundle:Mail:layout.html.twig' %}
+
+{% block subject %}Test Message{% endblock %}
+
+{% block alert_type %}good{% endblock %}
+{% block alert_message %}test.{% endblock %}
+
+{% block content %}
+    <tr>
+        <td class="content-block">
+            This is a test.
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            <a href="#" class="btn-primary">Button</a>
+        </td>
+    </tr>
+{% endblock %}
+
+{% block body_plain %}
+This is a test.
+===============
+
+    > test complete.
+{% endblock %}
