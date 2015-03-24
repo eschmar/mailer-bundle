@@ -12,6 +12,7 @@ Composer (<a href="https://packagist.org/packages/eschmar/mailer-bundle" target=
 
 app/Appkernel.php:
 ```php
+new Eschmar\CssInlinerBundle\EschmarCssInlinerBundle(),
 new Eschmar\MailerBundle\EschmarMailerBundle(),
 ```
 
