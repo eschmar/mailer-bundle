@@ -2,6 +2,8 @@
 
 namespace Eschmar\MailerBundle\Service;
 
+use Symfony\Bundle\TwigBundle\TwigEngine;
+
 /**
  * Sends emails with html and plain parts.
  *
@@ -17,22 +19,22 @@ class Mailer
 
     /**
      * Twig
-     * @var Twig_Environment
+     * @var TwigEngine
      **/
     private $twig;
 
-    function __construct($mailer, $twig) {
+    function __construct(\Swift_Mailer $mailer, TwigEngine $templating) {
         $this->mailer = $mailer;
-        $this->twig = $twig;
+        $this->twig = $templating;
     }
 
     /**
      * Sends an email. Expects twig blocks `body_html`, `body_plain` and `subject`.
      *
-     * @return void
+     * @return boolean
      * @author Marcel Eschmann
      **/
-    public function send($template, $context, $from, $to)
+    public function send($template, $context, $from, $to, $bcc = null)
     {
         // load template and enable globals
         $context = $this->twig->mergeGlobals($context);
@@ -51,8 +53,16 @@ class Mailer
             ->setBody($plain, 'text/plain')
             ->addPart($html, 'text/html');
 
+        if ($bcc) { $message->setBcc($bcc); }
+
         // send email via swiftmailer
-        $this->mailer->send($message);
+        try {
+            $this->mailer->send($message);
+        } catch (\Exception $e) {
+            return false;
+        }
+
+        return true;
     }
 
 } // END class Mailer
