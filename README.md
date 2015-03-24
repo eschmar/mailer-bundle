@@ -5,6 +5,7 @@ Conveniently send html/plaintext emails in Symfony2. **Work in progress. More in
 Composer (<a href="https://packagist.org/packages/eschmar/mailer-bundle" target="_blank">Packagist</a>):
 ```json
 "require": {
+    "eschmar/css-inliner-bundle": "dev-master",
     "eschmar/mailer-bundle": "dev-master"
 },
 ```
