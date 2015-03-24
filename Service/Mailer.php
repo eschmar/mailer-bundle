@@ -2,8 +2,6 @@
 
 namespace Eschmar\MailerBundle\Service;
 
-use Symfony\Bundle\TwigBundle\TwigEngine;
-
 /**
  * Sends emails with html and plain parts.
  *
@@ -19,13 +17,13 @@ class Mailer
 
     /**
      * Twig
-     * @var TwigEngine
+     * @var Twig_Environment
      **/
     private $twig;
 
-    function __construct(\Swift_Mailer $mailer, TwigEngine $templating) {
+    function __construct(\Swift_Mailer $mailer, \Twig_Environment $twig) {
         $this->mailer = $mailer;
-        $this->twig = $templating;
+        $this->twig = $twig;
     }
 
     /**
