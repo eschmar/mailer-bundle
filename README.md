@@ -1,5 +1,5 @@
-# Eschmar Mailer Bundle
-Conveniently send html/plaintext emails in Symfony2. **Work in progress.**
+# Mailer Bundle
+Conveniently send html/plaintext emails in Symfony2. **Work in progress. More instructions coming soon.**
 
 # Installation
 Composer (<a href="https://packagist.org/packages/eschmar/mailer-bundle" target="_blank">Packagist</a>):
