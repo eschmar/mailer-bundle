@@ -22,7 +22,12 @@ The ``emailer`` service expects templates to have the 3 blocks ``subject``, ``bo
 
 ````php
 $mailer = $this->get('emailer');
-$mailer->send("EschmarMailerBundle:Mail:test.html.twig", [], $from, $to[, $bcc]);
+if (!$mailer->send("EschmarMailerBundle:Mail:test.html.twig", [], $from, $to[, $bcc])) {
+    // Oops!
+    return;
+}
+
+// success
 ````
 
 # License
