@@ -1,5 +1,6 @@
 # Mailer Bundle
 Conveniently send html/plaintext emails in Symfony2. This bundle ships with a version of [Mailgun's Action Email](https://github.com/mailgun/transactional-email-templates) ready to send emails.
+
 ![test.html.twig](https://raw.githubusercontent.com/eschmar/mailer-bundle/master/test.html.twig.jpg)
 
 # Installation
