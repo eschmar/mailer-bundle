@@ -4,4 +4,4 @@ services:
         class: Eschmar\MailerBundle\Service\Mailer
         arguments: ['@mailer', '@twig']
 
-    EschmarMailerBundle\Service\Mailer: 'eschmar_mailer'
+    EschmarMailerBundle\Service\Mailer: '@eschmar_mailer'
