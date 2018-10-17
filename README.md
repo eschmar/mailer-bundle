@@ -7,8 +7,8 @@ Conveniently send html/plaintext emails in Symfony2. This bundle ships with a ve
 Composer (<a href="https://packagist.org/packages/eschmar/mailer-bundle" target="_blank">Packagist</a>):
 ```json
 "require": {
-    "eschmar/css-inliner-bundle": "dev-master",
-    "eschmar/mailer-bundle": "dev-master"
+    "eschmar/css-inliner-bundle": "^1.0.0",
+    "eschmar/mailer-bundle": "^0.2.0"
 },
 ```
 
@@ -23,7 +23,7 @@ The ``emailer`` service expects templates to have the 3 blocks ``subject``, ``bo
 
 ````php
 $mailer = $this->get('emailer');
-if (!$mailer->send("EschmarMailerBundle:Mail:test.html.twig", [], $from, $to[, $bcc])) {
+if (!$mailer->send("@EschmarMailer/Mail/test.html.twig", [], $from, $to[, $bcc])) {
     // Oops!
     return;
 }

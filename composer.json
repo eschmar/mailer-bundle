@@ -20,6 +20,6 @@
         "php": ">=5.3.3",
         "symfony/symfony": ">=3.0.0",
         "symfony/swiftmailer-bundle": "~2.3",
-        "eschmar/css-inliner-bundle": "dev-master"
+        "eschmar/css-inliner-bundle": "^1.0.0"
     }
 }
