@@ -44,14 +44,15 @@ class Mailer
         $html = $template->renderBlock('body_html', $context);
 
         // create message
-        $message = \Swift_Message::newInstance()
-            ->setSubject($subject)
+        $message = (new \Swift_Message($subject))
             ->setFrom($from)
             ->setTo($to)
             ->setBody($plain, 'text/plain')
             ->addPart($html, 'text/html');
 
-        if ($bcc) { $message->setBcc($bcc); }
+        if ($bcc) {
+            $message->setBcc($bcc);
+        }
 
         // send email via swiftmailer
         try {
