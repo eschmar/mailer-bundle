@@ -17,9 +17,9 @@
     },
     "target-dir": "Eschmar/MailerBundle",
     "require": {
-        "php": ">=5.3.3",
-        "symfony/symfony": ">=3.0.0",
-        "symfony/swiftmailer-bundle": "~2.3",
+        "php": ">=7.1.0",
+        "twig/twig": "^2.4.4",
+        "symfony/swiftmailer-bundle": "^3.2.3",
         "eschmar/css-inliner-bundle": "^1.0.0"
     }
 }
