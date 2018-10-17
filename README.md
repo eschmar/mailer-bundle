@@ -14,7 +14,7 @@ The ``eschmar_mailer`` service expects templates to have the 3 blocks ``subject`
 
 ````php
 use Eschmar\MailerBundle\Service\Mailer;
-...
+// ...
 
 if (!$mailer->send("@EschmarMailer/Mail/test.html.twig", [], $from, $to[, $bcc])) {
     // Oops!
