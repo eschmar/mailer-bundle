@@ -44,7 +44,7 @@ class Mailer
         $html = $template->renderBlock('body_html', $context);
 
         // create message
-        $message = (new Swift_Message($subject))
+        $message = (new \Swift_Message($subject))
             ->setFrom($from)
             ->setTo($to)
             ->setBody($plain, 'text/plain')
