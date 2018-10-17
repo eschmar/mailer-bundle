@@ -2,8 +2,8 @@
     "name": "eschmar/mailer-bundle",
     "license": "MIT",
     "type": "symfony-bundle",
-    "keywords": ["mail", "mailer", "symfony"],
-    "description": "Conveniently send html/plaintext emails in Symfony2.",
+    "keywords": ["mail", "mailer", "symfony", "css inline", "inlined"],
+    "description": "Conveniently send html/plaintext emails in Symfony 4.",
     "homepage": "https://github.com/eschmar/mailer-bundle",
     "authors": [
         {
