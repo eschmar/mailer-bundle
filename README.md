@@ -1,5 +1,5 @@
 # Mailer Bundle
-Conveniently send html/plaintext emails in Symfony2. This bundle ships with a version of [Mailgun's Action Email](https://github.com/mailgun/transactional-email-templates) ready to send emails.
+Conveniently send html/plaintext emails in Symfony3. This bundle ships with a version of [Mailgun's Action Email](https://github.com/mailgun/transactional-email-templates) ready to send emails.
 
 ![test.html.twig](https://raw.githubusercontent.com/eschmar/mailer-bundle/master/test.html.twig.jpg)
 
@@ -16,7 +16,7 @@ new Eschmar\MailerBundle\EschmarMailerBundle(),
 ```
 
 # Usage
-The ``emailer`` service expects templates to have the 3 blocks ``subject``, ``body_html`` and ``body_plain`` and already includes a layout file ``EschmarMailerBundle:Mail:layout.html.twig`` ready to go. I do not recommend using embedded base64 images, this is just for demo purposes. Of course this layout is entirely optional, you may build your own templates. Using the Twig tag ``{% cssinline %}{% endcssinline %}``, CSS styles are inlined (some email clients strip out ``<head>`` and ``<style>`` tags).
+The ``emailer`` service expects templates to have the 3 blocks ``subject``, ``body_html`` and ``body_plain`` and already includes a layout file ``@EschmarMailer/Mail/layout.html.twig`` ready to go. I do not recommend using embedded base64 images, this is just for demo purposes. Of course this layout is entirely optional, you may build your own templates. Using the Twig tag ``{% cssinline %}{% endcssinline %}``, CSS styles are inlined (some email clients strip out ``<head>`` and ``<style>`` tags).
 
 ````php
 $mailer = $this->get('emailer');
